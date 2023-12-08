@@ -1,0 +1,25 @@
+/* Header */ 
+
+.header{
+    background: linear-gradient(25deg, rgba(92,41,144,1) 28%, rgba(255,130,54,1) 100%);
+}
+
+.header h1{
+    text-align: center;
+    margin: 0;
+    padding: 20px 0 15px 0;
+    font-size: 6rem;
+    font-family: 'Hedvig Letters Sans', sans-serif;
+    font-weight:bolder;
+    color: white;
+}
+
+.header h2{
+    text-align: center;
+    margin: 0;
+    padding: 0 0 15px 0;
+    font-size: 2rem;
+    font-family: 'Hedvig Letters Sans', sans-serif;
+    font-weight: lighter;
+    color: white;
+}
