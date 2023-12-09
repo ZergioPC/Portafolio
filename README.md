@@ -1,6 +1,6 @@
 - 👋 Hola, soy @ZergioPC
 - 👀 Estoy interesado en aprender todo lo que pueda
-- 🌱 Actualmente estoy aprendiendo git, c++, javascript y web design 
+- 🌱 Actualmente estoy aprendiendo git, GD Script (Godot), javascript y web design 
 - 💞️ Cualquier ayuda es bienvenida 😅
 
 <!---
