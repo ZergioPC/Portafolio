@@ -3,19 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./estilos.css"/>
+    <link rel="stylesheet" href="estilos.css">
     <title>Sergio Palacios</title>
-
-    <!--fuentes-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header class="header">
         <figure>
-            <img src="" alt="">
-            <figcaption>Sergio Palacios</figcaption>
+            <img src="" alt="Sergio Logo">
         </figure>
         <nav>
             <ul>
@@ -28,35 +22,67 @@
         </nav>
     </header>
     <main>
-        <section id="introduce">
-            <div></div>
+        <section id="introduce" class="division introduce">
+            <div>
+                <img src="" alt="img">
+            </div>
             <div>
                 <h1>Sergio Palacios</h1>
-                <p>🧑🏻‍💻 Soy un creador multidisciplinario que trabaja en animaci&oacute;n, diseño, m&uacute;sica y programaci&oacute;n para desarrollar proyectos.</p>
-                <div>Redes</div>
+                <p>Soy un creador multidisciplinario que trabaja en animaci&oacute;n, diseño, m&uacute;sica y programaci&oacute;n para desarrollar proyectos.</p>
+                <ul class="listaH">
+                    <li><a href=""><img src="" alt="instagram"></a></li>
+                    <li><a href=""><img src="" alt="github"></a></li>
+                </ul>
             </div>
         </section>
         <section id="code">
-            <h2>Programador</h2>
-            <section>
-                videojuego
+            <h2>Programador 🧑🏻‍💻</h2>
+            <section class="division">
+                <div>
+                    <img src="" alt="">
+                </div>
+                <div>
+                    <h3>Mi Primer Videojuego</h3>
+                    <p>Al estilo de un <i>horda shooter</i> con est&eacute;tica retrofuturista, deber&aacute;s defender la entrada del edificio de olas infinitas de robots sedientos por la dominación mundial</p>
+                    <p>Este es el primer proyecto de videojuego que realizo de forma profesional, tanto el apartado visual, la m&uacute;sica, el diseño de sonido y la programaci&oacute;n</p>
+                    <iframe frameborder="0" src="https://itch.io/embed/3554860?linkback=true&amp;link_color=1c0e0e" width="552" height="167"><a href="https://zergiopc.itch.io/how-not-to-survive-a-robot-invasion">Cómo NO Sobrevivir a una Invasión de Robots by Sergio Palacios</a></iframe>
+                </div>
             </section>
-            <section>
-                <span>Otros proyectos</span>
+            <section class="code-otros-list">
+                <h3>Otros proyectos</h3>
                 <ul>
-
+                    <li><a href="">
+                        <article>
+                            <figure>
+                                <img src="./img/code_section/github_logo" alt="Github Logo">
+                            </figure>
+                            <div>
+                                <span>Titulo del Repositorio</span>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia perferendis, repudiandae ab voluptatibus.</p>
+                            </div>
+                        </article>
+                    </a></li>
                 </ul>
             </section>
         </section>
-        <section id="music">
-            <h2>M&uacute;sica</h2>
+        <section id="music" class="music">
+            <h2>M&uacute;sica 🎹</h2>
             <p>Me gusta componer y producir canciones, con g&eacute;neros y estilos musicales diferentes buscando entender y aprender para mejorar c&oacute;mo m&uacute;sico.</p>
-            <ul>
-                
+            <ul class="music-list">
+                <li>
+                    <article>
+                        <iframe src="https://www.youtube.com/embed/xyHFvTxDGv0?si=pqfmxGhxrNaaMuA3" frameborder="0" allowfullscreen></iframe>
+                        <div>
+                            <span>Titulo de la cancion</span>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero harum sed omnis itaque, nemo vitae dolore ab cupiditate, ducimus tempore sit quas maxime alias accusamus minima nam? Itaque, maiores quod.</p>
+                            <time datetime="2025-05-05">Marzo 2025</time>
+                        </div>
+                    </article>
+                </li>
             </ul>
         </section>
         <section id="animation">
-            <h2>Animaci&oacute;n</h2>
+            <h2>Animaci&oacute;n 🎨</h2>
             <p>Utilizando diferentes herramientas tanto <b>2D</b> c&oacute;mo <b>3D,</b> me gusta experimentar y contar historias.</p>
             <ul>
 
@@ -65,7 +91,7 @@
     </main>
     <footer id="social-media">
         <h2>Contacto y Redes sociales</h2>
-        <ul>
+        <ul class="listaH">
             <li>Github</li>
             <li>Itch.io</li>
             <li>Instagram</li>
