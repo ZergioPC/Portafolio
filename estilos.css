@@ -57,6 +57,69 @@ nav a:hover {
 
 /* PRESENTACION */
 
+.avatar-container {
+    position: relative;
+    display: block;
+    margin: 0;
+}
+
+.avatar-container > * {
+    position: absolute;
+    width: 100%;
+}
+
+.avatar-head {
+    transition-duration: 500ms;
+    transition-timing-function: cubic-bezier();
+}
+
+.avatar-circles {
+    opacity: 0.4;
+    animation: anim-avatar-circle-spin 4s, anim-avatar-circle-scale 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.avatar-circles:nth-child(1) {
+    transform-origin: 52% 50%;
+    animation-delay: 1s;
+}
+
+.avatar-circles:nth-child(2) {
+    transform-origin: 49% 51%;
+    filter: invert();
+}
+
+.avatar-circles:nth-child(3) {
+    transform-origin: 49% 49%;
+    animation-delay: 2s;
+}
+
+
+@keyframes anim-avatar-circle-spin {
+    0%{
+        transform: rotateZ(0deg);
+    }
+    50% {
+        transform: rotateZ(180deg);
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes anim-avatar-circle-scale {
+    0%{
+        scale: 0.9;
+    }
+    50% {
+        scale: 0.8;
+    }
+    100%{
+        scale: 0.9;
+    }
+}
+
 .introduce{
     height: 90vh;
 }
