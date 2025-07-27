@@ -65,12 +65,26 @@ nav a:hover {
 
 .avatar-container > * {
     position: absolute;
+}
+
+.avatar-container img {
+    width: 100%;
+}
+
+.avatar-container div {
     width: 100%;
 }
 
 .avatar-head {
     transition-duration: 500ms;
-    transition-timing-function: cubic-bezier();
+}
+
+.avatar-head:nth-child(3) {
+    transition-delay: 50ms;
+}
+
+.avatar-head:last-child {
+    transition-delay: 25ms;
 }
 
 .avatar-circles {
