@@ -71,4 +71,4 @@ setTimeout(()=>{
     
     $AvatarEyeChange();
     $AvatarMouthChange();
-},4000);
+},3000);
