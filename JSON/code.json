@@ -1,0 +1,23 @@
+[
+    {
+        "name":"Horario Maker",
+        "desc":"Aplicación web que permite a los estudiantes universitarios diseñar, personalizar y gestionar sus horarios académicos de forma visual",
+        "url":"https://github.com/ZergioPC/Horario-Maker",
+        "estado":false
+    },{
+        "name":"Python Synth",
+        "desc":"Sintetizador aditivo usando series de Fourier. Proyecto final de la clase de Procesamiento de Señales de la universidad",
+        "url":"https://github.com/ZergioPC/python-synth",
+        "estado":true
+    },{
+        "name":"OBS Soccer Scoreboards",
+        "desc":"Marcadores de Futbol Soccer para usar dentro de OBS mediante el navegador",
+        "url":"https://github.com/ZergioPC/obs-soccer-scoreboards",
+        "estado":false
+    },{
+        "name":"UMNG IntCompGráfica",
+        "desc":"Repositorio de trabajos y actividades realizados durante las clase de Introducción a la computación gráfica de la universidad",
+        "url":"https://github.com/ZergioPC/UMNG_IntCompGrafica",
+        "estado":true
+    }
+]

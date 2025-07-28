@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Bahianita";
-    src: url(./fonts/Bahianita/Bahianita-Regular.ttf) format('truetype');
+    src: url(../fonts/Bahianita/Bahianita-Regular.ttf) format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -8,7 +8,7 @@
 /* Cherry Bomb One */
 @font-face {
     font-family: "Cherry Bomb One";
-    src: url(./fonts/Cherry_Bomb_One/CherryBombOne-Regular.ttf) format('truetype');
+    src: url(../fonts/Cherry_Bomb_One/CherryBombOne-Regular.ttf) format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -16,7 +16,7 @@
 /* Zain - Regular */
 @font-face {
     font-family: "Zain";
-    src: url(./fonts/Zain/Zain-Regular.ttf) format('truetype');
+    src: url(../fonts/Zain/Zain-Regular.ttf) format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -24,7 +24,7 @@
 /* Zain - Italic */
 @font-face {
     font-family: "Zain";
-    src: url(./fonts/Zain/Zain-Italic.ttf) format('truetype');
+    src: url(../fonts/Zain/Zain-Italic.ttf) format('truetype');
     font-weight: normal;
     font-style: italic;
 }
@@ -32,7 +32,7 @@
 /* Zain - Bold */
 @font-face {
     font-family: "Zain";
-    src: url(./fonts/Zain/Zain-Bold.ttf) format('truetype');
+    src: url(../fonts/Zain/Zain-Bold.ttf) format('truetype');
     font-weight: bold;
     font-style: normal;
 }
@@ -40,7 +40,7 @@
 /* Zain - Light */
 @font-face {
     font-family: "Zain";
-    src: url(./fonts/Zain/Zain-Light.ttf) format('truetype');
+    src: url(../fonts/Zain/Zain-Light.ttf) format('truetype');
     font-weight: 300;
     font-style: normal;
 }
@@ -48,7 +48,7 @@
 /* Zain - Light Italic */
 @font-face {
     font-family: "Zain";
-    src: url(./fonts/Zain/Zain-LightItalic.ttf) format('truetype');
+    src: url(../fonts/Zain/Zain-LightItalic.ttf) format('truetype');
     font-weight: 300;
     font-style: italic;
 }
@@ -56,7 +56,7 @@
 /* Zain - ExtraBold */
 @font-face {
     font-family: "Zain";
-    src: url(./fonts/Zain/Zain-ExtraBold.ttf) format('truetype');
+    src: url(../fonts/Zain/Zain-ExtraBold.ttf) format('truetype');
     font-weight: 800;
     font-style: normal;
 }
@@ -64,7 +64,7 @@
 /* Zain - ExtraLight */
 @font-face {
     font-family: "Zain";
-    src: url(./fonts/Zain/Zain-ExtraLight.ttf) format('truetype');
+    src: url(../fonts/Zain/Zain-ExtraLight.ttf) format('truetype');
     font-weight: 200;
     font-style: normal;
 }
@@ -72,7 +72,7 @@
 /* Zain - Black */
 @font-face {
     font-family: "Zain";
-    src: url(./fonts/Zain/Zain-Black.ttf) format('truetype');
+    src: url(../fonts/Zain/Zain-Black.ttf) format('truetype');
     font-weight: 900;
     font-style: normal;
 }

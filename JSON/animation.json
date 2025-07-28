@@ -1,0 +1,24 @@
+[
+    {
+        "title":"Naruto Op. Sign Parodia",
+        "desc":"Parodia animada estilo minecraft del Opening #6 del anime Naruto Shippuden, usando personajes populares del videojuego",
+        "url":"https://youtu.be/crc3zlX2z3E?si=wiuTt1-TL18_8m1R",
+        "date":"Abril 2020",
+        "views":"180k",
+        "mini":"./img/anim_section/naruto-mini.jpg"
+    },{
+        "title":"Spy x Familly Op. Mixed Nuts Parodia",
+        "desc":"Parodia animada estilo minecraft del Opening #2 del anime Spy x Family, usando personajes populares del videojuego",
+        "url":"https://youtu.be/KGOT1JO_v28?si=K27NbBWF8ny7pp70",
+        "date":"Julio 2022",
+        "views":"15k",
+        "mini":"./img/anim_section/spyfamili-mini.webp"
+    },{
+        "title":"Intro Animada para @Jhon213115Gamer",
+        "desc":"Animación de inicio pedida por un creador de contenido de minecraft, recuerdo de mis inicios en la animación 3D",
+        "url":"https://youtu.be/aZAXfHIzhjo?si=WDC7M8oeP0GZzd4a",
+        "date":"Mayo 2017",
+        "views":"303",
+        "mini":"./img/anim_section/intro-mini.webp"
+    }
+]

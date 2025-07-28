@@ -14,8 +14,11 @@ h1,h2,h3 {
 }
 
 section > h2 {
-    font-size: 3em;
+    font-size: 3.5em;
     text-align: center;
+    margin: 0;
+    padding: 50px 0;
+    background-color: white;
 }
 
 section > h2 span{
@@ -228,10 +231,40 @@ section > h2 span{
     font-size: 4em;
 }
 
-/* CODE */
+.introduce div:first-child {
+    animation-name: introduce-avatar-show;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.53,1.46,.5,1.02);
+    background-color: red;
+}
+
+@keyframes introduce-avatar-show {
+    0%{
+        clip-path: circle(0% at 50% 50%);
+    }
+    100%{
+        clip-path: circle(42% at 50% 50%);
+    }
+}
+
+/* MARK: CODE */
 
 .code-firstGame{
-    background-image: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/code_section/capa_juego_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.code-firstGame {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    object-fit: contain;
 }
 
 .code-otros-list ul {
@@ -261,24 +294,149 @@ section > h2 span{
     margin: 0;
 }
 
+.code-otros-list div {
+    box-sizing: border-box;
+    position: relative;
+    height: 100%;
+    padding-top: 15px;
+}
+
+.code-otros-list span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2px 7px;
+    border-radius: 7PX;
+    font-size: 0.7em;
+    font-weight: lighter;
+    letter-spacing: 1px;
+}
+
 .code-otros-list img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
 
+.code-otros-list h4 {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: bold;
+}
 
-/*  MUSICA */
+.code-otros-list p {
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.code-state-workin{
+    background-color: yellow;
+}
+
+.code-state-done{
+    background-color: green;
+}
+
+/* MARK: MUSICA */
 
 .music-list {
     list-style: none;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .music-list article {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 20px;
+    display: block;
+    width: 400px;
+    background-color: #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.music-list iframe {
+    width: 100%;
+}
+
+.music-list div {
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 10px 15px;
+}
+
+.music-list h4,
+.music-list span,
+.music-list time{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.music-list h4 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.music-list span {
+    margin: 0;
+    font-size: 1.5em;
+    transform: translateY(-0.4em);
+}
+
+.music-list time {
+    margin: 0;
+    font-size: 1em;
+    transform: translateY(-0.5em);
+}
+
+/* MARK: ANIMACION */
+
+.animation-yt ul,
+.animation-ig ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.animation-ig figure {
+    display: block;
+    box-sizing: border-box;
+    margin: 0;
+    width: 540px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.animation-ig blockquote {
+    transform: translateY(-56px) scale(1.2);
+}
+
+.animation-yt article {
+    display: block;
+    width: 540px;
+}
+
+.animation-yt a img {
+    width: 100%;
+}
+
+.animation-yt div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.animation-yt h4 {
+    margin: 0;
+    font-size: 2em;
 }

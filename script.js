@@ -72,3 +72,158 @@ setTimeout(()=>{
     $AvatarEyeChange();
     $AvatarMouthChange();
 },3000);
+
+//MARK: Code Section
+const $codeProjectsDiv = document.getElementById("codeProjectList");
+
+fetch("./JSON/code.jsonn")
+    .then(respuesta => respuesta.json())
+    .then(datos => {
+        const ul = document.createElement("ul");
+        datos.forEach(dato =>{
+            const li = document.createElement("li");
+            const a = document.createElement("a");
+            a.href = dato.url;
+            a.setAttribute("target","blank")
+
+            const article = document.createElement("article");
+
+            const figure = document.createElement("figure");
+            const img = document.createElement("img");
+            img.src = "./img/code_section/github_logo.png";
+            img.alt = "Github Logo";
+            figure.appendChild(img);
+
+            const div = document.createElement("div");
+            const h4 = document.createElement("h4");
+            h4.innerText = dato.name;
+            const p = document.createElement("p");
+            p.innerText = dato.desc;
+            const span = document.createElement("span");
+            if(dato.estado){
+                span.innerText = "work in progres 🔧";
+                span.classList.add("code-state-workin");
+            }else{
+                span.innerText = "complete ✅";
+                span.classList.add("code-state-done");
+            }
+
+
+            div.appendChild(h4);
+            div.appendChild(p);
+            div.appendChild(span)
+
+            article.appendChild(figure);
+            article.appendChild(div);
+
+            a.appendChild(article);
+            li.appendChild(a);
+
+            ul.appendChild(li);
+        });
+        $codeProjectsDiv.appendChild(ul);
+    })
+    .catch(e => {
+        const p = document.createElement("p");
+            p.innerText = "Error al cargar proyectos";
+        $codeProjectsDiv.appendChild(p);
+    });
+
+//MARK: Music Section
+
+const $musicProjectsDiv = document.getElementById("MusicProjectList");
+
+fetch("./JSON/music.jsonn")
+.then(respuesta => respuesta.json())
+.then(datos => {
+    const ul = document.createElement("ul");
+    ul.classList.add("music-list");
+    datos.forEach(dato => {
+        const li = document.createElement("li");
+        const article = document.createElement("article");
+
+        const iframe = document.createElement("iframe");
+        iframe.src = dato.url;
+        iframe.width = "400px";
+        iframe.allowFullscreen = true;
+
+        const div = document.createElement("div");
+
+        const h4 = document.createElement("h4");
+        h4.innerText = dato.name;
+
+        const span = document.createElement("span");
+        span.innerText = dato.genero;
+
+        const time = document.createElement("time");
+        time.innerText = dato.date;
+
+        div.appendChild(h4);
+        div.appendChild(span);
+        div.appendChild(time);
+
+        article.appendChild(iframe);
+        article.appendChild(div);
+
+        li.appendChild(article);
+        ul.appendChild(li);
+    });
+    $musicProjectsDiv.appendChild(ul);
+})
+.catch(e => {
+    const p = document.createElement("p");
+        p.innerText = "Error al cargar proyectos";
+        $musicProjectsDiv.appendChild(p);
+});
+
+
+//MARK: Animation Section
+
+const $animListDiv = document.getElementById("animProjectList");
+
+fetch("./JSON/animation.json")
+    .then(respuesta => respuesta.json())
+    .then(datos => {
+        const ul = document.createElement("ul");
+        datos.forEach(dato => {
+            const li = document.createElement("li");
+            const a = document.createElement("a");
+            a.href = dato.url;
+            a.target = "blank";
+
+            const article = document.createElement("article");
+
+            const iframe = document.createElement("img");
+            iframe.src = dato.mini;
+
+            const div = document.createElement("div");
+
+            const h4 = document.createElement("h4");
+            h4.innerText = dato.title;
+
+            const p = document.createElement("p");
+            p.innerText = dato.desc;
+
+            const span = document.createElement("span");
+            span.innerText = dato.views;
+
+            const time = document.createElement("time");
+            time.innerText = dato.date;
+
+            div.appendChild(h4);
+            div.appendChild(span);
+            div.appendChild(time);
+
+            a.appendChild(iframe);
+
+            article.appendChild(a);
+            article.appendChild(div);
+
+            li.appendChild(article);
+            ul.appendChild(li);
+        });
+        $animListDiv.appendChild(ul);
+    })
+    .catch(error => {
+        console.error("Error al cargar el JSON:", error);
+    });
