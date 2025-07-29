@@ -147,7 +147,7 @@ fetch("./JSON/code.json")
 
 const $musicProjectsDiv = document.getElementById("MusicProjectList");
 
-fetch("./JSON/music.json")
+fetch("https://zergiopc.github.io/Portafolio/JSON/music.json")
 .then(respuesta => respuesta.json())
 .then(datos => {
     const ul = document.createElement("ul");
@@ -185,6 +185,7 @@ fetch("./JSON/music.json")
     $musicProjectsDiv.appendChild(ul);
 })
 .catch(e => {
+    console.log("error al cargar musica");
     const p = document.createElement("p");
         p.innerText = "Error al cargar proyectos";
         $musicProjectsDiv.appendChild(p);
@@ -195,7 +196,7 @@ fetch("./JSON/music.json")
 
 const $animListDiv = document.getElementById("animProjectList");
 
-fetch("./JSON/animation.json")
+fetch("https://zergiopc.github.io/Portafolio/JSON/animation.json")
     .then(respuesta => respuesta.json())
     .then(datos => {
         const ul = document.createElement("ul");
@@ -239,5 +240,5 @@ fetch("./JSON/animation.json")
         $animListDiv.appendChild(ul);
     })
     .catch(error => {
-        console.error("Error al cargar el JSON:", error);
+        console.error("Error al cargar Animaicines:", error);
     });
