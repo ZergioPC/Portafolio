@@ -90,7 +90,7 @@ window.addEventListener("scroll", () => {
 //MARK: Code Section
 const $codeProjectsDiv = document.getElementById("codeProjectList");
 
-fetch("./JSON/code.json")
+fetch("https://zergiopc.github.io/Portafolio/JSON/code.json")
     .then(respuesta => respuesta.json())
     .then(datos => {
         const ul = document.createElement("ul");
@@ -138,6 +138,7 @@ fetch("./JSON/code.json")
         $codeProjectsDiv.appendChild(ul);
     })
     .catch(e => {
+        console.log("error al cargar codigo");
         const p = document.createElement("p");
             p.innerText = "Error al cargar proyectos";
         $codeProjectsDiv.appendChild(p);
