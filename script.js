@@ -90,7 +90,7 @@ window.addEventListener("scroll", () => {
 //MARK: Code Section
 const $codeProjectsDiv = document.getElementById("codeProjectList");
 
-fetch("./JSON/code.jsonn")
+fetch("./JSON/code.json")
     .then(respuesta => respuesta.json())
     .then(datos => {
         const ul = document.createElement("ul");
@@ -147,7 +147,7 @@ fetch("./JSON/code.jsonn")
 
 const $musicProjectsDiv = document.getElementById("MusicProjectList");
 
-fetch("./JSON/music.jsonn")
+fetch("./JSON/music.json")
 .then(respuesta => respuesta.json())
 .then(datos => {
     const ul = document.createElement("ul");

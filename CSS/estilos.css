@@ -1,3 +1,14 @@
+:root {
+    --foggy-white: #D6D9D3;
+    --cool-gray: #9BA3A8;
+    --soft-sky-blue: #8EA6B8;
+    --earthy-brown: #6A4E3C;
+    --dark-moss-green: #3F4E44;
+    --deep-varish-green: #1F2824;
+    --golden-blonde: #C7A36F;
+    --muted-teal: #5E7A85;
+}
+
 /* MARK: COMMON */
 
 *{
@@ -28,6 +39,15 @@ section > h2 span{
     transform: translateY(-3.5px);
 }
 
+i{
+    color: var(--earthy-brown);
+    font-weight: bold;
+}
+
+b{
+    color: var(--muted-teal);
+}
+
 .division {
     display: flex;
     flex-direction: row;
@@ -50,6 +70,16 @@ section > h2 span{
 .sombra {
     filter: drop-shadow(3px 3px 5px #0000007c);
 }
+
+.texto {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.466);
+    backdrop-filter: blur(20px);
+    text-align: center;
+}
+
 
 /* MARK: SVG Icons */
 
@@ -107,6 +137,7 @@ section > h2 span{
     font-size: 2.1rem;
     scale: 1.2;
     transform: translateY(-15px);
+    color: var(--earthy-brown);
 }
 
 .header-logo p:first-child {
@@ -130,10 +161,12 @@ section > h2 span{
     margin-top: 10px;
     font-family: "Bahianita";
     font-size: 2rem;
+    color: var(--dark-moss-green);
 }
 
 .header nav a:hover {
-    background-color: #555;
+    background-color: var(--dark-moss-green);
+    color: white;
 }
 
 
@@ -285,12 +318,17 @@ section > h2 span{
     font-size: 4em;
 }
 
-.introduce > div:last-child {
+.introduce > div:nth-child(2) {
     position: relative;
     box-sizing: border-box;
-    padding: 30px 50px;
+    padding: 30px 60px;
     border-radius: 20px;
     background-color: white;
+}
+
+.introduce p {
+    font-size: 2.1em;
+    font-weight: lighter;
 }
 
 .introduce-social {
@@ -314,18 +352,32 @@ section > h2 span{
 }
 
 .introduce-social svg {
-    fill: black;
+    fill: var(--dark-moss-green);
 }
 
 /* MARK: CODE */
 
 .code-main-sec {
+    align-items: center;
+    justify-content: center;
     padding: 0;
     margin: 40px 60px;
     border-radius: 20px;
     background-color: #ffffff63;
     backdrop-filter: blur(10px);
     overflow: hidden;
+}
+
+.code-main-sec div:last-child {
+    padding: 30px 50px;
+}
+
+.code-main-sec h3 {
+    font-size: 4em;
+}
+
+.code-main-sec p {
+    font-size: 1.3em;
 }
 
 .code-main-sec iframe {
@@ -339,15 +391,14 @@ section > h2 span{
     background-image: url(../img/code_section/capa_juego_bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    box-sizing: border-box;
     width: 100%;
     height: 100%;
-    padding: 10px;
-    object-fit: contain;
+    padding: 0;
 }
 
 .code-firstGame > img {
     width: 100%;
+    height: 100%;
     animation-name: anim-code-titulo;
     animation-duration: 6s;
     animation-iteration-count: infinite;
@@ -364,9 +415,12 @@ section > h2 span{
 }
 
 .code-otros-list ul {
+    padding: 0;
     list-style: none;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .code-otros-list a {
@@ -384,6 +438,7 @@ section > h2 span{
     border-radius: 10px;
     padding: 10px;
     overflow: hidden;
+    backdrop-filter: blur(20px);
 }
 
 .code-otros-list figure {
@@ -430,11 +485,13 @@ section > h2 span{
 }
 
 .code-state-workin{
-    background-color: yellow;
+    background-color: var(--foggy-white);
+    color: black;
 }
 
 .code-state-done{
-    background-color: green;
+    background-color: var(--golden-blonde);
+    color: black;
 }
 
 @keyframes anim-code-titulo {
@@ -448,17 +505,24 @@ section > h2 span{
 
 /* MARK: MUSICA */
 
+.music > p{
+    font-size: 2em;
+}
+
 .music-list {
     list-style: none;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .music-list article {
     display: block;
+    margin: 10px;
     width: 400px;
-    background-color: #ccc;
+    background-color: white;
     border-radius: 10px;
     overflow: hidden;
 }
@@ -488,12 +552,23 @@ section > h2 span{
 .music-list h4 {
     margin: 0;
     font-size: 2em;
+    color: var(--dark-moss-green);
+}
+
+.music-list h4::after{
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: var(--dark-moss-green);
+    transform: translateY(-6px);
 }
 
 .music-list span {
     margin: 0;
     font-size: 1.5em;
     transform: translateY(-0.4em);
+    color: #6A4E3C;
 }
 
 .music-list time {
@@ -503,6 +578,10 @@ section > h2 span{
 }
 
 /* MARK: ANIMACION */
+
+.animation > p{
+    font-size: 2em;
+}
 
 .animation-yt ul,
 .animation-ig ul {
@@ -565,6 +644,7 @@ section > h2 span{
 .animation-yt h4 {
     margin: 0;
     font-size: 2em;
+    color: var(--dark-moss-green);
 }
 
 .animation-yt h4::after {
@@ -572,14 +652,14 @@ section > h2 span{
     display: block;
     width: 100%;
     height: 1px;
-    background-color: black;
+    background-color: var(--dark-moss-green);
     transform: translateY(-6px);
 }
 
 .animation-yt time {
     padding: 2px 10px;
     border-radius: 7px;
-    background-color: black;
+    background-color: var(--dark-moss-green);
     color: white;
 }
 
@@ -610,7 +690,7 @@ section > h2 span{
 
 .contact a {
     text-decoration: none;
-    color: black;
+    color: var(--dark-moss-green);
 }
 
 .contact figure {
@@ -629,7 +709,7 @@ section > h2 span{
 
 .contact svg {
     transition-duration: 0.5s;
-    fill: black;
+    fill: var(--dark-moss-green);
 }
 
 .contact svg:hover {
@@ -642,4 +722,53 @@ section > h2 span{
     padding: 0;
     text-align: center;
     opacity: 0.7;
+}
+
+
+@media (max-width: 1000px) {
+    .header {
+        display: none;
+    }
+
+    /* Ajustar tamaño de los SVG en la sección de contacto */
+    .contact svg {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* Opcional: reducir márgenes y tamaño de fuente en párrafos */
+    .contact p {
+        margin-top: 100px;
+        font-size: 1.2em;
+    }
+
+    .bg-1 {
+        display: none;
+    }
+    
+    .division {
+        flex-direction: column;
+    }
+
+    
+    .avatar-container img {
+        width: 50%;
+    }
+    
+    .introduce {
+        height: auto;
+    }
+    
+    .introduce h1 {
+        font-size: 3rem;
+    }
+
+    .introduce-social {
+        top: -35px;
+        right: -40px;
+    }
+
+    .introduce-avatar {
+        display: none;
+    }
 }
