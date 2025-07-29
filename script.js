@@ -73,6 +73,20 @@ setTimeout(()=>{
     $AvatarMouthChange();
 },3000);
 
+//MARK: ParalaxFondo
+
+const $bgParalax = document.getElementById("bgParalax");
+console.log($bgParalax);
+
+window.addEventListener("scroll", () => {
+    const scrollTop = window.scrollY;
+    const scrollHeight = document.body.scrollHeight - window.innerHeight;
+    const scrollRatio = scrollTop / scrollHeight;
+    
+    $bgParalax.style.transform = `translateY(-${scrollRatio * 50}%)`
+});
+
+
 //MARK: Code Section
 const $codeProjectsDiv = document.getElementById("codeProjectList");
 

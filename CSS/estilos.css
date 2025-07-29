@@ -47,8 +47,33 @@ section > h2 span{
     flex-wrap: nowrap;
 }
 
+.sombra {
+    filter: drop-shadow(3px 3px 5px #0000007c);
+}
+
+/* MARK: SVG Icons */
+
+.icon-github {
+    width: 100%;
+    height: 100%;
+}
+
+.icon-instagram{
+    transform: scale(0.8) translateY(-10px);
+}
+
+.icon-itch {
+    width: 100%;
+    height: 100%;
+}
+
+.icon-youtube {
+    width: 100%;
+    height: 100%;
+}
 
 /* MARK: Navbar */
+
 .header {
     display: flex;
     flex-direction: row;
@@ -57,7 +82,7 @@ section > h2 span{
     padding: 0;
     width: 100%;
     height: 10vh;
-    background-color: red;
+    
 }
 
 .header-logo{
@@ -156,7 +181,7 @@ section > h2 span{
 }
 
 .avatar-circles {
-    opacity: 0.4;
+    opacity: 0.2;
     animation: anim-avatar-circle-spin 4s, anim-avatar-circle-scale 6s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
@@ -222,33 +247,90 @@ section > h2 span{
 
 /* MARK: PRESENTACION */
 
+.bg-1 {
+    z-index: -1;
+    display: block;
+    position: absolute;
+    top: 10vh;
+    width: 100%;
+    height: 90vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.bg-1 img {
+    position: relative;
+    left: -600px;
+    height: 130vh;
+}
+
+.bg-2 {
+    z-index: -2;
+    position: fixed;
+    width: 100%;
+    opacity: 0.3;
+    transition-timing-function: linear;
+}
+
 .introduce{
+    box-sizing: border-box;
     height: 90vh;
     overflow-y: hidden;
+    margin: 0;
+    padding: 40px 100px;
 }
 
 .introduce h1 {
     font-size: 4em;
 }
 
-.introduce div:first-child {
-    animation-name: introduce-avatar-show;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-timing-function: cubic-bezier(.53,1.46,.5,1.02);
-    background-color: red;
+.introduce > div:last-child {
+    position: relative;
+    box-sizing: border-box;
+    padding: 30px 50px;
+    border-radius: 20px;
+    background-color: white;
 }
 
-@keyframes introduce-avatar-show {
-    0%{
-        clip-path: circle(0% at 50% 50%);
-    }
-    100%{
-        clip-path: circle(42% at 50% 50%);
-    }
+.introduce-social {
+    position: absolute;
+    right: 50px;
+    scale: 0.5;
+}
+
+.introduce-social figure {
+    display: block;
+    margin: 0 20px;
+    position: relative;
+    width: 115px;
+    height: 115px;
+}
+
+.introduce-social figcaption {
+    position: absolute;
+    top: 120px;
+    right: -10px;
+}
+
+.introduce-social svg {
+    fill: black;
 }
 
 /* MARK: CODE */
+
+.code-main-sec {
+    padding: 0;
+    margin: 40px 60px;
+    border-radius: 20px;
+    background-color: #ffffff63;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+}
+
+.code-main-sec iframe {
+    width: 80%;
+}
 
 .code-firstGame{
     display: flex;
@@ -257,14 +339,28 @@ section > h2 span{
     background-image: url(../img/code_section/capa_juego_bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-.code-firstGame {
     box-sizing: border-box;
     width: 100%;
     height: 100%;
     padding: 10px;
     object-fit: contain;
+}
+
+.code-firstGame > img {
+    width: 100%;
+    animation-name: anim-code-titulo;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.code-otros-list h3 {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+    font-size: 2.5rem;
+    text-align: center;
+    background-color: white;
 }
 
 .code-otros-list ul {
@@ -341,6 +437,15 @@ section > h2 span{
     background-color: green;
 }
 
+@keyframes anim-code-titulo {
+    0%,100%{
+        transform: scale(1.0);
+    }
+    50%{
+        transform: scale(1.05);
+    }
+}
+
 /* MARK: MUSICA */
 
 .music-list {
@@ -401,11 +506,12 @@ section > h2 span{
 
 .animation-yt ul,
 .animation-ig ul {
+    padding: 0;
     list-style: none;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .animation-ig figure {
@@ -413,17 +519,21 @@ section > h2 span{
     box-sizing: border-box;
     margin: 0;
     width: 540px;
-    height: 400px;
-    overflow: hidden;
-}
-
-.animation-ig blockquote {
-    transform: translateY(-56px) scale(1.2);
+    transition-duration: 0.5s;
 }
 
 .animation-yt article {
     display: block;
     width: 540px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    transition-duration: 0.5s;
+}
+
+.animation-yt article:hover,
+.animation-ig figure:hover {
+    transform: scale(1.05);
 }
 
 .animation-yt a img {
@@ -434,9 +544,102 @@ section > h2 span{
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    align-items: center;    
+}
+
+.animation-yt span::before {
+    content: "";
+    display: inline-block;
+    margin-right: 5px;
+    width: 0.9em;
+    height: 0.9em;
+    background-image: url(../img/icons/playBtn_googleFonts.svg);
+    background-size: contain;
+    transform: translateY(0.15em);
+}
+
+.animation-yt span {
+    font-size: 1.5em;
 }
 
 .animation-yt h4 {
     margin: 0;
     font-size: 2em;
+}
+
+.animation-yt h4::after {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    transform: translateY(-6px);
+}
+
+.animation-yt time {
+    padding: 2px 10px;
+    border-radius: 7px;
+    background-color: black;
+    color: white;
+}
+
+/* MARK: CONTACTO */
+
+.contact {
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: 40px;
+    background-color: white;
+}
+
+.contact h2 {
+    margin: 20px;
+    text-align: center;
+    font-size: 4rem;
+}
+
+.contact ul {
+    margin: 0 100px;
+    padding: 50px 100px; 
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contact a {
+    text-decoration: none;
+    color: black;
+}
+
+.contact figure {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    justify-items: center;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+    height: 170px;
+}
+
+.contact figcaption {
+    text-align: center;
+}
+
+.contact svg {
+    transition-duration: 0.5s;
+    fill: black;
+}
+
+.contact svg:hover {
+    scale: 1.1;
+}
+
+.contact p{
+    margin: 0;
+    margin-top: 200px;
+    padding: 0;
+    text-align: center;
+    opacity: 0.7;
 }
