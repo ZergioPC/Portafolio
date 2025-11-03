@@ -76,7 +76,6 @@ setTimeout(()=>{
 //MARK: ParalaxFondo
 
 const $bgParalax = document.getElementById("bgParalax");
-console.log($bgParalax);
 
 window.addEventListener("scroll", () => {
     const scrollTop = window.scrollY;
@@ -88,6 +87,7 @@ window.addEventListener("scroll", () => {
 
 
 //MARK: Code Section
+
 const $codeProjectsDiv = document.getElementById("codeProjectList");
 
 fetch("https://zergiopc.github.io/Portafolio/JSON/code.json")
@@ -146,51 +146,55 @@ fetch("https://zergiopc.github.io/Portafolio/JSON/code.json")
 
 //MARK: Music Section
 
-const $musicProjectsDiv = document.getElementById("MusicProjectList");
+let currentSongIndex = 0;
+let songsList = [];
+const player = document.getElementById("musicPlayer");
+
+
+function renderSongs() {
+    const list = document.getElementById('songList');
+    list.innerHTML = '';
+    songsList.forEach((song,item) => {
+        const li = document.createElement('li');
+        li.className = 'song-item';
+        if (item === currentSongIndex) {
+            li.classList.add('active');
+        }
+        li.innerHTML = `
+            <div class="song-title">${songsList[item].name}</div>
+            <div class="song-genero">${songsList[item].genero}</div>
+            <div class="song-date">${songsList[item].date}</div>
+        `;
+        li.onclick = () => playSong(item);
+        list.appendChild(li);
+    });    
+}
+
+function playSong(i) {
+    player.innerHTML = "";
+    currentSongIndex = i;
+    const song = songsList[i];
+    const iframe = document.createElement("iframe");
+    iframe.src = song.url;
+    iframe.width = "100%";
+    iframe.height = "100%";
+    iframe.allowFullscreen = true;
+    player.appendChild(iframe);
+    document.getElementById('current-song').textContent = `${song.name} - ${song.genero}. ${song.date}`;
+    renderSongs();
+}
+
 
 fetch("https://zergiopc.github.io/Portafolio/JSON/music.json")
 .then(respuesta => respuesta.json())
 .then(datos => {
-    const ul = document.createElement("ul");
-    ul.classList.add("music-list");
-    datos.forEach(dato => {
-        const li = document.createElement("li");
-        const article = document.createElement("article");
-
-        const iframe = document.createElement("iframe");
-        iframe.src = dato.url;
-        iframe.width = "400px";
-        iframe.allowFullscreen = true;
-
-        const div = document.createElement("div");
-
-        const h4 = document.createElement("h4");
-        h4.innerText = dato.name;
-
-        const span = document.createElement("span");
-        span.innerText = dato.genero;
-
-        const time = document.createElement("time");
-        time.innerText = dato.date;
-
-        div.appendChild(h4);
-        div.appendChild(span);
-        div.appendChild(time);
-
-        article.appendChild(iframe);
-        article.appendChild(div);
-
-        li.appendChild(article);
-        ul.appendChild(li);
-    });
-    $musicProjectsDiv.appendChild(ul);
+    songsList = datos;
+    renderSongs()
 })
 .catch(e => {
     console.log("error al cargar musica");
-    const p = document.createElement("p");
-        p.innerText = "Error al cargar proyectos";
-        $musicProjectsDiv.appendChild(p);
 });
+
 
 
 //MARK: Animation Section

@@ -76,6 +76,39 @@
         </section>
         <section id="code" class="code">
             <h2><span>🎮</span>Programador<span>💻</span></h2>
+            <p class="texto">Desde la escuela he tenido inter&eacute;s por la programaci&oacute;n. Ya en la <b>universidad</b> tuve el espacio y la oportunidad de adentrarme en este mundo de c&oacute;digos y diagramas, por lo que he logrado adquirir grandes conocimientos.</p>
+            <section class="code-stats">
+                <article class="code-art-lang sombra">
+                    <h3>Python</h3>
+                    <img class="sombra" src="./img/code_section/Python-logo-notext.svg.png" alt="python icon">
+                    <ul>
+                        <li>3 años de experiencia programando</li>
+                        <li>2 meses de trabajo y aprendizaje con <b>FastApi</b></li>
+                        <li>2 meses de aprendizaje con <b>Django</b></li>
+                        <li><span class="code-range">Nivel Junior</span></li>
+                    </ul>
+                </article>
+                <article class="code-art-lang sombra">
+                    <h3>JavaScript</h3>
+                    <img class="sombra" src="./img/code_section/JavaScript-logo.png" alt="JavaScript icon">
+                    <ul>
+                        <li>4 años de experiencia programando</li>
+                        <li>1 año de trabajo y aprendizaje con <b>NodeJS</b></li>
+                        <li>2 mese de aprendizaje con <b>React Framework</b></li>
+                        <li>2 mese de aprendizaje con <b>ElectronJS</b></li>
+                        <li><span class="code-range">Nivel Junior</span></li>
+                    </ul>
+                </article>
+                <article class="code-art-other sombra">
+                    <h3>Areas de Conocimiento</h3>
+                    <ul>
+                        <li>Frontend</li>
+                        <li>Backend</li>
+                        <li>Linux</li>
+                        <li>Bases de Datos SQL</li>
+                    </ul>
+                </article>
+            </section>
             <section class="division code-main-sec sombra">
                 <div class="code-firstGame">
                     <img src="./img/code_section/capa_juego_titulo.png" alt="videojuego principal">
@@ -88,14 +121,29 @@
                 </div>
             </section>
             <section class="code-otros-list">
-                <h3 sombra>Otros proyectos</h3>
+                <h3 sombra>Otros proyectos en GitHub</h3>
                 <div id="codeProjectList"></div>
             </section>
         </section>
         <section id="music" class="music">
             <h2><span>🎹</span>M&uacute;sica<span>🎶</span></h2>
             <p class="texto">Me gusta componer y producir canciones, con g&eacute;neros y estilos musicales diferentes buscando entender y aprender para mejorar c&oacute;mo m&uacute;sico.</p>
-            <div id="MusicProjectList"></div>
+            <!-- <div id="MusicProjectList"></div> -->
+            <div id="MusicApp" class="music-container">
+                <div class="player-section">
+                    <div class="player-wrapper">
+                        <div id="musicPlayer"></div>
+                    </div>
+                    <div class="now-playing">
+                        <h2>Now Playing</h2>
+                        <p id="current-song">Select a song to start playing</p>
+                    </div>
+                </div>
+                <div class="playlist-section">
+                    <h1>🎵 Playlist</h1>
+                    <ul class="song-list" id="songList"></ul>
+                </div>
+            </div>
         </section>
         <section id="animation" class="animation">
             <h2><span>🎬</span>Animaci&oacute;n<span>🎨</span></h2>
@@ -172,6 +220,7 @@
         </ul>
         <p>© Sergio Palacios</p>
     </footer>
+    <script src="https://www.youtube.com/iframe_api"></script>
     <script async src="//www.instagram.com/embed.js"></script>
     <script src="./script.js"></script>
 </body>
