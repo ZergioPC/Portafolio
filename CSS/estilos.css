@@ -293,12 +293,6 @@ b{
     overflow: hidden;
 }
 
-.bg-1 img {
-    position: relative;
-    left: -600px;
-    height: 130vh;
-}
-
 .bg-2 {
     z-index: -2;
     position: fixed;
@@ -313,6 +307,9 @@ b{
     overflow-y: hidden;
     margin: 0;
     padding: 40px 100px;
+    background-image: url("/img/Caspar_David_Friedrich_-_Wanderer_above_the_sea_of_fog-landscape.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
 .introduce h1 {
@@ -724,15 +721,15 @@ b{
 }
 
 .song-item:hover {
-    background: #e9ecef;
+    background: var(--soft-sky-blue);
     transform: translateX(5px);
-    border-left-color: #667eea;
+    border-left-color: var(--muted-teal);
 }
 
 .song-item.active {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    border-left-color: #764ba2;
+    background: linear-gradient(135deg, var(--golden-blonde) 0%, var(--foggy-white) 100%);
+    color: var(--dark-moss-green);
+    border-left-color: var(--earthy-brown);
 }
 
 .song-title {
@@ -842,6 +839,34 @@ b{
     border-radius: 7px;
     background-color: var(--dark-moss-green);
     color: white;
+}
+.animation-stats{
+    margin: 30px 0;
+    padding: 20px 100px;
+    background-color: #ffffff69;
+    backdrop-filter: blur(10px);
+}
+
+.animation-softwares{
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.animation-softwares img {
+    width: 100px;
+    margin: 10px;
+    transition: 100ms;
+    filter: contrast(0.3) grayscale() brightness(1.5);
+}
+
+.animation-softwares img:hover {
+    width: 120px;
+    filter: none;
+    transform: translateY(-15px);
 }
 
 /* MARK: CONTACTO */
