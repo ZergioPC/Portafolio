@@ -307,7 +307,7 @@ b{
     overflow-y: hidden;
     margin: 0;
     padding: 40px 100px;
-    background-image: url("/img/Caspar_David_Friedrich_-_Wanderer_above_the_sea_of_fog-landscape.jpg");
+    background-image: url("../img/Caspar_David_Friedrich_-_Wanderer_above_the_sea_of_fog-landscape.jpg");
     background-size: cover;
     background-position: center;
 }
