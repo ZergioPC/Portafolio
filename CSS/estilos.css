@@ -112,7 +112,7 @@ b{
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 10vh;
+    height: 15vh;
     
 }
 
@@ -303,7 +303,7 @@ b{
 
 .introduce{
     box-sizing: border-box;
-    height: 90vh;
+    height: 85vh;
     overflow-y: hidden;
     margin: 0;
     padding: 40px 100px;
