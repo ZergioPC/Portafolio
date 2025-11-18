@@ -755,8 +755,58 @@ b{
 .song-date {
     display: inline-block;
     font-size: 13px;
-    color: var(--deep-varish-green);
+    color: var(--deep-fo-green);
     font-style: italic;
+}
+
+/* MARK: MUSIC DEMOS */
+.music-demos {
+    padding: 20px;
+    margin: 40px 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    background-color: var(--foggy-white);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+}
+
+.music-demos h3 {
+    width: 100%;
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--dark-moss-green);
+    font-family: "Bahianita";
+    margin-bottom: 20px;
+}
+
+.music-demos article {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    width: calc(50% - 40px); /* Two columns with gap */
+    min-width: 300px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    box-sizing: border-box;
+}
+
+.music-demos article:hover {
+    transform: scale(1.03);
+}
+
+.music-demos p {
+    margin: 0 0 15px 0;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--earthy-brown);
+    font-family: "Bahianita";
+    text-align: left;
+}
+
+.music-demos audio {
+    width: 100%;
 }
 
 /* MARK: ANIMACION */
@@ -893,7 +943,7 @@ b{
 }
 
 .animation-workflow .video-container h3 {
-    font-size: 24px;
+    font-size: 54px;
 }
 
 .animation-workflow .video-container > div {
